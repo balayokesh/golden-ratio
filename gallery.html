@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-in">
+
+	<head>
+		<title>Golden Ratio</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Favicon -->
+		<link rel="icon" href="images/favicon.png" type="image/png">
+		<!-- Including bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Including google fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+		<!-- Including font awesome -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- Including Jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Including popper.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- Including common CSS file -->
+		<link rel="stylesheet" type="text/css" href="style/all.css">
+		<!-- Including checkbox stylesheet -->
+		<link rel="stylesheet" type="text/css" href="style/checkbox.css">	
+		<!-- including bootstrap script -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	    <style type="text/css">
+
+	    	main{
+	    		display: flex;
+	    		margin: 0;
+	    	}
+	    	main div#gallery-grid{
+	    		background: rgb(0, 0, 0);
+	    		border: 1px solid rgb(255, 255, 255);
+	    		width: 63%;
+	    		margin: 1%;
+	    		border-radius: 10px;
+	    	}
+	    	main aside#gallery-filter{
+	    		background: rgb(0, 0, 0);
+	    		color: rgb(255, 255, 255);
+	    		font-size: 1em;
+	    		width: 34%;
+	    		padding: 0 1% 2% 5%;
+	    		margin: 1% 1% 1% 0;
+	    		border-radius: 5px;
+	    		border-radius: 10px;
+	    	}
+	    	main aside#gallery-filter label{
+	    		font-size: 1em;
+	    	}
+	    	aside p{
+	    		color: rgb(114, 219, 216);	
+	    		text-decoration: underline;
+	    		font-weight: bold;
+	    	}
+	    	main div img{
+	    		margin: 2% 0;
+	    		padding: 1% 0 0 2%;
+	    		min-width: 100px;
+	    		max-width: 100px;
+	    		min-height: 100px;
+	    		max-height: 100px;
+	    	}
+
+	    	/*For medium screen size - large phone or tab*/
+	    	@media screen and (min-width: 600px){
+	    		main div#gallery-grid{
+	    			width: 70%;
+	    			margin: 1%;
+	    		}
+	    		main aside#gallery-filter{
+	    			right: 0;
+	    			font-size: 1.50em;
+	    			width: 35%;
+	    			padding: 0 1% 2% 5%;
+	    			margin: 1% 1% 1% 0;
+	    		}
+	    		main div img{
+	    			margin: 2% 0;
+	    			padding: 1% 0 0 2%;
+	    			min-width: 150px;
+	    			max-width: 150px;
+	    			min-height: 150px;
+	    			max-height: 150px;
+	    		}
+	    	}
+
+	    	/*For medium screen size - tab or ipad*/
+	    	@media screen and (min-width: 900px){
+	    		main div#gallery-grid{
+	    			width: 72%;
+	    			margin: 1%;
+	    		}
+	    		main aside#gallery-filter{
+	    			font-size: 1.50em;
+	    			width: 30%;
+	    			padding: 0 1% 2% 5%;
+	    			margin: 1% 1% 1% 0;
+	    		}
+	    		main div img{
+	    			margin: 2% 0;
+	    			padding: 1% 0 0 2%;
+	    			min-width: 200px;
+	    			max-width: 200px;
+	    			min-height: 200px;
+	    			max-height: 200px;
+	    		}
+	    	}
+
+	    	/*For larger screen size -  desktop*/
+	    	@media screen and (min-width: 1000px){
+		    	main div#gallery-grid{
+		    		width: 72%;
+		    		margin: 1%;
+		    	}
+		    	main aside#gallery-filter{
+		    		width: 30%;
+		    		font-size: 1.50em;
+		    		padding: 2% 1% 1% 5%;
+		    		margin: 1% 1% 1% 0;
+		    	}
+		    	main div img{
+		    		margin: 2% 0;
+		    		padding: 1% 0 0 2%;
+		    		min-width: 300px;	
+		    		max-width: 300px;
+		    		min-height: 300px;
+		    		max-height: 300px;
+		    	}
+	    	}
+
+	    </style>
+
+	    <script>
+			$(document).ready(function(){
+			   $('header').load("header.html");
+			   $('footer').load("footer.html");
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<header></header>
+		
+		<main>
+			<div id="gallery-grid">
+				<!-- grid-buildings -->
+					<img src="images/buildings/1.jpeg" alt="buildings" class="grid-buildings">
+					<img src="images/buildings/2.jpeg" alt="buildings" class="grid-buildings">
+					<img src="images/buildings/3.png" alt="buildings" class="grid-buildings">
+					<img src="images/buildings/4.jpeg" alt="buildings" class="grid-buildings">
+				<!-- grid-geometrical -->
+					<img src="images/geometrical/1.jpg" alt="geometrical shape" class="grid-geometrical">
+					<img src="images/geometrical/2.png" alt="geometrical shape" class="grid-geometrical">
+					<img src="images/geometrical/3.png" alt="geometrical shape" class="grid-geometrical">
+					<img src="images/geometrical/4.png" alt="geometrical shape" class="grid-geometrical">
+					<img src="images/geometrical/5.png" alt="geometrical shape" class="grid-geometrical">
+				<!-- grid-human -->
+					<img src="images/human/1.png" alt="human" class="grid-human">
+					<img src="images/human/2.jpeg" alt="human" class="grid-human">
+					<img src="images/human/3.jpeg" alt="human" class="grid-human">
+				<!-- grid-logo -->
+					<img src="images/logo/1.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/2.jpeg" alt="logo" class="grid-logo">
+					<img src="images/logo/3.jpeg" alt="logo" class="grid-logo">
+					<img src="images/logo/4.jpeg" alt="logo" class="grid-logo">
+					<img src="images/logo/5.jpeg" alt="logo" class="grid-logo">
+					<img src="images/logo/6.png" alt="logo" class="grid-logo">
+					<img src="images/logo/7.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/8.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/9.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/10.png" alt="logo" class="grid-logo">
+					<img src="images/logo/11.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/12.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/13.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/14.jpg" alt="logo" class="grid-logo">
+					<img src="images/logo/15.png" alt="logo" class="grid-logo">
+				<!-- grid-nature -->
+					<img src="images/nature/1.png" alt="nature" class="grid-nature">
+					<img src="images/nature/2.png" alt="nature" class="grid-nature">
+					<img src="images/nature/3.jpeg" alt="nature" class="grid-nature">
+					<img src="images/nature/4.jpeg" alt="nature" class="grid-nature">
+					<img src="images/nature/5.png" alt="nature" class="grid-nature">
+					<img src="images/nature/6.jpg" alt="nature" class="grid-nature">
+					<img src="images/nature/7.jpeg" alt="nature" class="grid-nature">
+					<img src="images/nature/8.jpg" alt="nature" class="grid-nature">
+					<img src="images/nature/9.jpg" alt="nature" class="grid-nature">
+					<img src="images/nature/10.jpg" alt="nature" class="grid-nature">
+					<img src="images/nature/11.jpg" alt="nature" class="grid-nature">
+					<img src="images/nature/12.jpeg" alt="nature" class="grid-nature">
+				<!-- grid-art -->
+					<img src="images/art/1.jpeg" alt="art" class="grid-art">
+					<img src="images/art/2.jpg" alt="art" class="grid-art">
+					<img src="images/art/3.jpg" alt="art" class="grid-art">
+				<!-- grid-websites -->
+					<img src="images/websites/1.png" alt="website" class="grid-websites">
+					<img src="images/websites/2.png" alt="website" class="grid-websites">
+					<img src="images/websites/3.png" alt="website" class="grid-websites">
+					<img src="images/websites/4.png" alt="website" class="grid-websites">
+					<img src="images/websites/5.jpg" alt="website" class="grid-websites">
+			</div>
+
+			<!-- Filter option -->
+			<aside id="gallery-filter" onclick="filter()">
+				<p>Filter <i class="fa fa-filter"></i></p>
+				<input type="checkbox" id="buildings" class="css-checkbox">
+				<label for="buildings" class="css-label">Buildings</label><br>
+				<input type="checkbox" id="geometrical" class="css-checkbox">
+				<label for="geometrical" class="css-label">Geometric</label><br>
+				<input type="checkbox" id="human" checked class="css-checkbox">
+				<label for="human" class="css-label">Human</label><br>
+				<input type="checkbox" id="gallery-logo" class="css-checkbox">
+				<label for="gallery-logo" class="css-label">Logo</label><br>
+				<input type="checkbox" id="nature" checked class="css-checkbox">
+				<label for="nature" class="css-label">Nature</label><br>
+				<input type="checkbox" id="art" checked class="css-checkbox">
+				<label for="art" class="css-label">Art</label><br>
+				<input type="checkbox" id="websites" class="css-checkbox">
+				<label for="websites" class="css-label">Websites</label>
+			</aside>
+		</main>
+
+		<footer></footer>
+
+		<script type="text/javascript">
+
+			function filter(){
+
+				// filter for buildings
+				var grid_buildings = document.querySelectorAll(".grid-buildings");
+				if (document.querySelector("#buildings").checked == false){
+					var i;
+					for (i = 0; i < grid_buildings.length; i++) {
+				    	grid_buildings[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#buildings").checked == true){
+					var i;
+					for (i = 0; i < grid_buildings.length; i++) {
+				    	grid_buildings[i].style.display = "initial";
+				  	}		
+				}
+
+				// filter for geometrical
+				var grid_geometrical = document.querySelectorAll(".grid-geometrical");
+				if (document.querySelector("#geometrical").checked == false){
+					var i;
+					for (i = 0; i < grid_geometrical.length; i++) {
+				    	grid_geometrical[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#geometrical").checked == true){
+					var i;
+					for (i = 0; i < grid_geometrical.length; i++) {
+				    	grid_geometrical[i].style.display = "initial";
+				  	}		
+				}
+
+				// filter for human
+				var grid_human = document.querySelectorAll(".grid-human");
+				if (document.querySelector("#human").checked == false){
+					var i;
+					for (i = 0; i < grid_human.length; i++) {
+				    	grid_human[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#human").checked == true){
+					var i;
+					for (i = 0; i < grid_human.length; i++) {
+				    	grid_human[i].style.display = "initial";
+				  	}		
+				}
+
+				// filter for logo
+				var grid_logo = document.querySelectorAll(".grid-logo");
+				if (document.querySelector("#gallery-logo").checked == false){
+					var i;
+					for (i = 0; i < grid_logo.length; i++) {
+				    	grid_logo[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#gallery-logo").checked == true){
+					var i;
+					for (i = 0; i < grid_logo.length; i++) {
+				    	grid_logo[i].style.display = "initial";
+				  	}		
+				}
+
+				// filter for nature
+				var grid_nature = document.querySelectorAll(".grid-nature");
+				if (document.querySelector("#nature").checked == false){
+					var i;
+					for (i = 0; i < grid_nature.length; i++) {
+				    	grid_nature[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#nature").checked == true){
+					var i;
+					for (i = 0; i < grid_nature.length; i++) {
+				    	grid_nature[i].style.display = "initial";
+				  	}		
+				}
+
+				// filter for art
+				var grid_art = document.querySelectorAll(".grid-art");
+				if (document.querySelector("#art").checked == false){
+					var i;
+					for (i = 0; i < grid_art.length; i++) {
+				    	grid_art[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#art").checked == true){
+					var i;
+					for (i = 0; i < grid_art.length; i++) {
+				    	grid_art[i].style.display = "initial";
+				  	}		
+				}
+
+				// filter for websites
+				var grid_websites = document.querySelectorAll(".grid-websites");
+				if (document.querySelector("#websites").checked == false){
+					var i;
+					for (i = 0; i < grid_websites.length; i++) {
+				    	grid_websites[i].style.display = "none";
+				  	}
+				}
+				else if (document.querySelector("#websites").checked == true){
+					var i;
+					for (i = 0; i < grid_websites.length; i++) {
+				    	grid_websites[i].style.display = "initial";
+				  	}		
+				}
+			}
+			
+			window.onload = filter();
+
+		</script>
+
+	</body>
+
+</html>

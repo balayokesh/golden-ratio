@@ -1,0 +1,411 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+body{
+	width: 1005;
+	height: auto;
+}
+html {
+	scroll-behavior: smooth;
+}
+.back-to-top {
+	float: right;
+}
+#top-header{
+	background-color: #000;
+	height: 100vh;
+	clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0);
+}
+#logo{
+	height: 80px;
+	width: 80px;
+}
+.nav-item{
+	margin-right: 55px;
+	font-size: 1.5rem;
+	font-family: 'Abril Fatface', cursive;
+}
+.navbar .nav-item .nav-link:hover{
+	color: #ff1e56;
+}
+.myH1 .glow {
+	color: #000;
+  	text-align: center;
+  	-webkit-animation: glow 1s ease-in-out infinite alternate;
+  	-moz-animation: glow 1s ease-in-out infinite alternate;
+  	animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+	from {
+    	text-shadow: 0 0 0.5px #fff, 0 0 1px #fff, 0 0 3px #FFD700, 0 0 5px #FFD700, 0 0 7px #FFD700, 0 0 10px #FFD700, 0 0 12px #FFD700;
+  	}
+  	to {
+    	text-shadow: 0 0 20px #fff, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700, 0 0 60px #FFD700, 0 0 70px #FFD700, 0 0 80px #FFD700;
+  	}
+}
+@media screen and (max-width: 480px){
+	.myH1 h1{
+		font-family: 'Lobster', cursive;
+		color: gold;
+		font-size: 3.5rem;
+		text-align: center;
+		padding-top: 250px;
+	}
+	#topic-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 1.3rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	#caraousel-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 1.2rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	div.centerr{
+		text-align: center;
+	}
+	#text-image{
+		width: 300px;
+		height: 150px;
+	}
+	#text-para{
+		font-size: 1rem;
+		margin: 2%;
+	}
+	#para{
+		margin: 2%;
+	}
+	#carouselExampleIndicators{
+		width: 230px;
+		height: 130px;
+		margin: auto;
+		box-shadow: 0px 0px 17px 18px black;
+	}
+	.carousel-item img{
+		width: 230px;
+		height: 130px;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+	.myH1 h1{
+		font-family: 'Lobster', cursive;
+		color: gold;
+		font-size: 5rem;
+		text-align: center;
+		padding-top: 50vh;
+	}
+	#topic-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 2rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	#caraousel-text {
+		font-family: 'Abril Fatface', cursive;
+		font-size: 1.7rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	div.centerr{
+		text-align: center;
+	}
+	#text-image{
+		width: 390px;
+		height: 240px;
+	}
+	#text-para{
+		font-size: 1rem;
+		margin-left: 1px;
+		width: 80%;
+		height: 324px;
+		display: inline-block;
+		text-align: justify;
+		margin-top: 10px;
+		/* padding: 0 60px 0 60px; */
+	}
+	#para{
+		text-align: justify;
+		width: 80%;
+		display: inline-block;
+	}
+	#carouselExampleIndicators{
+		width: 300px;
+		height: 200px;
+		margin: auto;
+		box-shadow: 0px 0px 17px 18px black;
+	}
+	.carousel-item img{
+		width: 300px;
+		height: 200px;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 991px){
+	.myH1 h1{
+		font-family: 'Lobster', cursive;
+		color: gold;
+		font-size: 5rem;
+		text-align: center;
+		padding-top: 200px;
+	}
+	#topic-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 3rem;
+		text-align: center;
+		background-color: #ff1e56;
+    	box-shadow: inset 0 0 20px 9px black;
+    	border-radius: 140px;
+    	box-shadow: 13px 9px 14px 0px black;
+	}
+	#caraousel-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 2.7rem;
+		text-align: center;
+		background-color: #ff1e56;
+    	box-shadow: inset 0 0 20px 9px black;
+    	border-radius: 140px;
+    	box-shadow: 13px 9px 14px 0px black;
+	}
+	.nav-item{
+		margin-top: 20px;
+		font-size: 1rem;
+	}
+	#text-image{
+		width: 300px;
+		height: 200px;
+		margin-top: 120px;
+		margin-left: 20px;
+	}
+	#text-para{
+		font-size: 1rem;
+		width: 400px;
+		height: 250px;
+		margin: 20px 30px 0.1px 0.1px;
+		padding-right: 50px;
+	}
+	#carouselExampleIndicators{
+		width: 370px;
+		height: 270px;
+		margin: auto;
+		box-shadow: 0px 0px 17px 18px black;
+	}
+	#para{
+		margin: 140px 40px 10px 40px;
+	}
+	.carousel-item img{
+		width: 370px;
+		height: 270px;
+	}
+
+}
+@media (min-width: 992px) and (max-width: 1199px){
+	.myH1 h1{
+		font-family: 'Lobster', cursive;
+		color: gold;
+		font-size: 5.5rem;
+		text-align: center;
+		padding-top: 200px;
+	}
+	#topic-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 4rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	#caraousel-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 3.7rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	#text-image{
+		width: 420px;
+		height: 280px;
+		margin-top: 40px;
+		margin-left: 20px;
+	}
+	#text-para{
+		width: 480px;
+		height: 300px;
+		margin-top: 20px;
+		padding-right: 30px;
+	}
+	#carouselExampleIndicators{
+		width: 400px;
+		height: 300px;
+		margin: auto;
+		box-shadow: 0px 0px 17px 18px black;
+	}
+	#para{
+		font-size: 1rem;
+		margin: 40px 40px 10px 40px;
+	}
+	.carousel-item img{
+		width: 400px;
+		height: 300px;
+	}
+	.footer-contact{
+		padding-left: 30px;
+	}
+
+}
+@media (min-width: 1200px){
+	.myH1 h1{
+		font-family: 'Lobster', cursive;
+		color: gold;
+		font-size: 7rem;
+		text-align: center;
+		padding-top: 200px;
+
+	}
+	#topic-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 5rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	#caraousel-text {
+		font-family: 'Abril Fatface', cursive;
+		padding: 10px;
+		font-size: 4rem;
+		text-align: center;
+		background-color: #ff1e56;
+	    box-shadow: inset 0 0 20px 9px black;
+	    border-radius: 140px;
+	    box-shadow: 13px 9px 14px 0px black;
+	}
+	#text-image{
+		width: 500px;
+		height: 300px;
+		margin: 100px 50px 50px 30px;
+	}
+	#text-para{
+		font-size: 1.3rem;
+		width: 520px;
+		height: 300px;
+		margin: 50px 50px 50px 0;
+	}
+	#carouselExampleIndicators{
+		width: 400px;
+		height: 300px;
+		margin: auto;
+		box-shadow: 0px 0px 17px 18px black;		
+	}
+	#para{
+		font-size: 1.3rem;
+		margin: 120px 40px 10px 40px;
+	}
+	.carousel-item img{
+		width: 400px;
+		height: 300px;
+	}
+	.footer-contact{
+		padding-left: 10%;	
+	}
+}
+
+/* *************************************** Footer  start **************************************/
+#footer{
+	background: #323232;
+	padding: 0 0 25px 0;
+	color: #323232;
+	font-size: 14px;
+}
+#footer .footer-top{
+	background: #000;
+	padding: 60px 0 30px 0;
+}
+#footer .footer-top .footer-info{
+	margin-bottom: 30px;
+}
+#footer .footer-top .footer-info img{
+	height: 100px;
+	width: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#footer .footer-top .footer-info h3{
+	font-family: 'Lobster', cursive;
+	color: gold;
+	text-align: center;
+	font-size: 2.4rem;
+}
+#footer .footer-top .footer-links{
+	margin-bottom: 30px;
+}
+#footer .footer-top .footer-links ul{	
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#footer .footer-top .footer-links ul i{
+	padding-right: 5px;
+	color: #f82249;
+	font-size: 18px;
+}
+#footer .footer-top .footer-links ul li{
+	font-size: 18px;
+	padding: 10px 0;
+}
+#footer .footer-top .footer-links ul li:first-child{
+	padding-top: 0;
+}
+#footer .footer-top .footer-links ul a{
+	color: #ff1e56;
+}
+#footer .footer-top .footer-contact p{
+	line-height: 26px;
+	font-size: 1.2rem;
+}
+#footer .last-container{
+	height: auto;
+	width: 100%;
+}
+#footer .copyright{
+	text-align: center;
+	margin-top: 10px;
+	color: gold;
+	font-size: 1rem;
+}
+#footer .credits{
+	text-align: center;
+	font-size: 1rem;
+	color: gold;
+}
+/* *************************************** Footer end **************************************/

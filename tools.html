@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Golden Ratio | Tools</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Favicon -->
+		<link rel="icon" href="images/favicon.png" type="image/png">
+		<!-- Including bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Including google fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+		<!-- Including font awesome -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- Including Jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Including popper.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- Including common CSS file -->
+		<link rel="stylesheet" type="text/css" href="style/all.css">
+		<!-- including bootstrap script -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('header').load("header.html");
+			$('footer').load("footer.html");
+		});
+	</script>
+
+	<style>
+		body{
+			text-align: center;
+		}
+		form{
+			display: inline-block;
+			padding: 5%;
+			text-align: justify;
+			font-size: 1.5em;
+			margin: 2%;
+			border-radius: 10px;
+			background: black;
+			color: white;
+			font-style: italic;
+			font-family: roboto;
+		}
+		form input{
+			width: 40%;
+		}
+		form button{
+			border-radius: 50px;
+			margin: 0 50px;
+			width: 70%;
+			padding: 1%;
+			background-color: #ff1e56;
+			outline: none;
+			cursor: pointer;
+		}
+		form button:hover{
+			background-color: #ff4b5c;
+			outline: none;
+		}
+		footer label{
+			font-weight: bold;
+		}
+		form h3{
+			text-align: center;
+		}
+		form div{
+			float: right;
+			margin: 3% 0;
+		}
+		form img{
+			width: 30%;
+			height: auto;
+			float: left;
+			margin: 0
+		}
+		footer{
+			text-align: left;
+		}
+		header{
+			text-align: left;
+		}
+		body{
+			background-color: white;
+		}
+
+		@media screen and (max-width: 980px){
+			form div{
+				clear: both;
+			}
+			form img{
+				width: 100%;
+			}
+		}
+	</style>
+
+</head>
+<body>
+
+	<header></header>
+
+	<main>
+		<form>
+			<img src="NewImg/tools.png" alt="instruction">
+			<div>
+				<label for="long">Enter the longest side :</label>
+				<input type="number" id="long" placeholder=" eg: 34">
+				<br><br>
+				<label for="short">Enter the shortest side:</label>
+				<input type="number" id="short" placeholder=" eg: 21">
+				<br><br>
+				<button id="btn">Check ratio</button>
+				<h3 id="output"></h3>
+			</div>
+			
+		</form>
+	</main>
+	
+	<footer></footer>
+
+	<script>
+		document.getElementById("btn").addEventListener("click", function(event){
+			var a = document.querySelector('#long').value;
+			   var b = document.querySelector("#short").value;
+			   var output = document.querySelector('#output');
+			   if ( (a/b >= 1.5) && (a/b <= 1.7) ){
+				   output.innerHTML = a/b + "<br>" + "Hurray! It's golden ratio";
+			   }
+			   else if( (a/b >= 1.1) && (a/b <= 2.1)){
+				   output.innerHTML = a/b + "<br>" + "It's near to golden ratio!";
+			   }
+			   else{
+				   output.innerHTML = "Hmm! It's not an Golden ratio. Please check your values";
+			   }
+    		event.preventDefault();
+   			handleFireButton();
+		});
+	</script>
+
+</body>
+</html>
